@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <post>
-    <comment last_time='1267268649' content='NetBSDはロイヤリティを払わなければならないので、LinuxのようなオープンなOSへ移行する。' count='1'/>
-    <comment last_time='1267268649' content='マルチコアなんて組込み採用できっこない。' count='1'/>
-    <comment last_time='1267268649' content='設計仕様書を自動生成できるように専用ツールを導入する。suしてから起動するヤツ。' count='1'/>
-    <comment last_time='1267268649' content='組込みソフト開発者はASIC設計もできるべき。' count='1'/>
-    <comment last_time='1267268649' content='新しい組込みフレームワークにはJavaではなく.NETが相応わしい。' count='1'/>
-    <comment last_time='1267268649' content='なぜμITRONではダメなのか？' count='1'/>
-    <comment last_time='1267268649' content='μITRON上で動作するandroidシステムを採用しよう。' count='1'/>
-    <comment last_time='1267268649' content='NPはのりぴーの略。' count='1'/>
+    <comment last_time='1267268649' count='1' content='NetBSDはロイヤリティを払わなければならないので、LinuxのようなオープンなOSへ移行する。'/>
+    <comment last_time='1267268649' count='1' content='マルチコアなんて組込み採用できっこない。'/>
+    <comment last_time='1292570067' count='2' content='設計仕様書を自動生成できるように専用ツールを導入する。suしてから起動するヤツ。'/>
+    <comment last_time='1292564987' count='2' content='組込みソフト開発者はASIC設計もできるべき。'/>
+    <comment last_time='1292564421' count='2' content='新しい組込みフレームワークにはJavaではなく.NETが相応わしい。'/>
+    <comment last_time='1292565000' count='2' content='なぜμITRONではダメなのか？'/>
+    <comment last_time='1292564467' count='2' content='μITRON上で動作するandroidシステムを採用しよう。'/>
+    <comment last_time='1267268649' count='1' content='NPはのりぴーの略。'/>
 </post>
