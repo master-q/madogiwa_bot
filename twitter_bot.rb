@@ -1,7 +1,9 @@
+# -*- coding: utf-8 -*-
 require 'yaml'
 require 'rubygems'
 require 'twitter'
 require "time"
+require "rexml/document"
 
 # Twitter Botの機能を集約したクラス
 #   ・ひとりごとをつぶやく
@@ -64,7 +66,7 @@ class TwitterBot
     @client.follower_ids.each { |id| follower_names << id }
     friend_names = []
     @client.friend_ids.each { |id| friend_names << id}
-    add_followers = follower_names - friend_names
+    add_followers = strip_ids(follower_names) - strip_ids(friend_names)
 
     added_followers = []
     add_followers.each { |id|
@@ -84,7 +86,7 @@ class TwitterBot
     @client.follower_ids.each { |id| follower_names << id }
     friend_names = []
     @client.friend_ids.each { |id| friend_names << id}
-    delete_unfollowers = friend_names - follower_names
+    delete_unfollowers = strip_ids(friend_names) - strip_ids(follower_names)
 
     deleted_unfollowers = []
     delete_unfollowers.each { |id|
@@ -187,18 +189,18 @@ class TwitterBot
   end
 
   private
+  def strip_ids(ids_gem_return)
+    ids_gem_return.find{|a| a[0] == "ids"}[1]
+  end
+
   # twitterクライアントの作成
   def create_client
     oauth_bot_conf = @conf['bot']['oauth']
-    oauth = Twitter::OAuth.new(
-      oauth_bot_conf['consumer_key'],
-      oauth_bot_conf['consumer_secret']
-      )
-    oauth.authorize_from_access(
-      oauth_bot_conf['token'],
-      oauth_bot_conf['secret']
-    )
-    Twitter::Base.new(oauth)
+    Twitter::Client.new(:format => :json,
+                        :consumer_key => oauth_bot_conf['consumer_key'],
+                        :consumer_secret => oauth_bot_conf['consumer_secret'],
+                        :oauth_token => oauth_bot_conf['token'],
+                        :oauth_token_secret => oauth_bot_conf['secret'])
   end
 
   # comment要素配列の中で最も古くてポスト回数が少ないものを取得
