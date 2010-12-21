@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <reply>
     <keyword term='netbsd'>
-        <comment last_time='1267608427' content='NetBSDで製品が動くのか？' count='1'/>
-        <comment last_time='1267749667' content='ロイヤリティのかからないLinuxに移行すべき。' count='1'/>
-        <comment last_time='1267749667' content='それでパフォーマンスは出るの？' count='1'/>
+        <comment last_time='1267608427' count='1' content='NetBSDで製品が動くのか？'/>
+        <comment last_time='1292638337' count='2' content='ロイヤリティのかからないLinuxに移行すべき。'/>
+        <comment last_time='1267749667' count='1' content='それでパフォーマンスは出るの？'/>
     </keyword>
 </reply>
